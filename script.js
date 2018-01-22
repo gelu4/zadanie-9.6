@@ -13,10 +13,13 @@ add.addEventListener('click', function() {
 
 
 
-addOne.addEventListener('click', function() {
+addOne.addEventListener('click', function one() {
 	var lenLi= document.getElementsByTagName('li');
 	var len = lenLi.length;
 	var element = document.createElement('li');
 	element.innerHTML = ('item' + ' ' + len);
 	list.appendChild(element);
-					 }, { once: true });
+					 //, { once: true });
+
+addOne.removeEventListener('click',  one);
+});
